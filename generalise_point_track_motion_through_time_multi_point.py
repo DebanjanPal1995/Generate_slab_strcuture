@@ -1,4 +1,4 @@
-#@ Written by Debanjan Pal (2023), this code is used to generate slab structre, this code incorprates the track point through track-point-through-topologies.ipynb module 
+#@ Written by Debanjan Pal (2023), this code is used to generate slab structre, this code incorprates the track-point-through-topologies.ipynb module 
 # uploaded in Github by Lauren Ilano (https://github.com/GPlates/pygplates-tutorials/blob/master/notebooks/track-point-through-topologies.ipynb) 
 
 import pygplates
