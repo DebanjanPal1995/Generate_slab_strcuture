@@ -1,7 +1,10 @@
+#@ Written by Debanjan Pal (2023), this code is used to generate slab structre, this code incorprates the track point through track-point-through-topologies.ipynb module 
+# uploaded in Github by Lauren Ilano (https://github.com/GPlates/pygplates-tutorials/blob/master/notebooks/track-point-through-topologies.ipynb) 
+
 import pygplates
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
+import pandasas pd
 #from sphere_to_cartesian import *
 import project_slab_to_depth as slab_geom
 import sys
@@ -54,7 +57,7 @@ def track_point(rotation_filename, input_topology_filename, time_step, oldest_se
             # Get the stage rotation that will move the point from where it is at the current time
             # to its location at the next time step, based on the plate id that contains the point at the 
             # current time
-            stage_rotation = rotation_model.get_rotation(time-time_step, PlateID, time, anchor_plate_id=3)
+            stage_rotation = rotation_model.get_rotation(time-time_step, PlateID, time, anchor_plate_id=)
 
             # use the stage rotation to reconstruct the tracked point from position at current time 
             # to position at the next time step
@@ -80,12 +83,12 @@ def lat_lon(coord, no_of_time_steps,no_of_points):
     return(coordinates)
 
 ## Input Parmeters
-rotation_filename = 'Seton_etal_Modified_PlateModel.rot'
-input_topology_filename = 'Seton_etal_Modified_PlateTopologies.gpmlz'
-time_step = 0.1
-oldest_seed_time = 145.
-start_time=145
-end_time=140 
+rotation_filename = ''
+input_topology_filename = ''
+time_step = 
+oldest_seed_time = .
+start_time=
+end_time= 
 #### load the gmt file which has the points
 file = np.loadtxt("Pheonix.txt", dtype=float) ##### This I am initializng to make the dimenisional similarity for file and File_data2, since file will be
 # used to track ages from nc file (has format lon, lat) and for file (has format lat lon).
@@ -93,7 +96,7 @@ File_data2 = np.loadtxt("Pheonix.txt", dtype=float)
 
 #@ Call track_point function to get the lats and lons through time
 # Izanagi: 926, Pheonix:919, Farallon: 902, Meso-Tethys:530
-track_points2 = track_point(rotation_filename,input_topology_filename, time_step, oldest_seed_time, start_time, end_time, File_data2, PlateID=919) 
+track_points2 = track_point(rotation_filename,input_topology_filename, time_step, oldest_seed_time, start_time, end_time, File_data2, PlateID=) 
 
 #@ Age calculation is here
 #@ sample age from the age file
