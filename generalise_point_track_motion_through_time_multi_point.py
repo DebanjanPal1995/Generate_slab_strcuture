@@ -61,6 +61,9 @@ def track_point(rotation_filename, input_topology_filename, time_step, oldest_se
 
             # use the stage rotation to reconstruct the tracked point from position at current time 
             # to position at the next time step
+            # change stage_rotation to convergence velocity
+            # calculate the convergence velocity using the code 
+            # https://github.com/EarthByte/PlateTectonicTools/blob/master/ptt/subduction_convergence.py
             seed_geometry = stage_rotation * seed_geometry
     
         print('seed time = %d, plume is within plate %i' % (seed_time, PlateID))
